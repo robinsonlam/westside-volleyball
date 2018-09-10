@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+@import 'normalize';
+@import 'typography';
 
-* {
-	font-family: 'Roboto Condensed', 'Roboto', 'Helvetica', sans-serif;
+html {
+	background: $color-black;
 }
 
-.something {
-	font-size: 100px;
+:global {
+	.page {
+		padding: $padding-general;
+	}
 }

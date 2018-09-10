@@ -1,18 +1,17 @@
 import React from 'react';
 
-import { Sidebar } from '../components';
-
 import styles from '../styles/App.scss';
 
-class App extends React.Component {
+class Home extends React.Component {
   render() {
     return (
-      <div>
-				<Sidebar />
-        <p styleName="something">Welcome to Westside Volleyball Club</p>
+      <div className="page">
+				<h3>Welcome to Westside Volleyball Club</h3>
+				<p>Westside Volleyball Club was established in January 2006 but before that it went under other names, but originally began as a social family team. It is a non profit organisation based in Sydney South West</p>
+        <h5>Representative Volleyball</h5>
       </div>
     );
   };
 }
 
-export default App;
+export default Home;

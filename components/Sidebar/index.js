@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Link from 'next/link';
+import ActiveLink from '../ActiveLink';
+
+import styles from './Sidebar.scss';
 
 class Sidebar extends React.Component {
 	constructor (props) {
@@ -12,19 +14,32 @@ class Sidebar extends React.Component {
 
 	render () {
 		return (
-      <div>
-        <nav>
-					<p>
-						<Link href="/about">
-							<a>Who We Are</a>
-						</Link>
-					</p>
+      <div styleName="sidebarContainer">
+				<div styleName="logo">
+					<img
+						src="/static/images/transparent-logo.png"
+						alt="Westside Logo"
+					/>
+				</div>
 
-					<p>
-						<Link href="/contact">
-							<a>Join Us / Enquiries</a>
-						</Link>
-					</p>
+        <nav styleName="sidebar">
+					<h3 styleName="navLink">
+						<ActiveLink href="/">
+							Home
+						</ActiveLink>
+					</h3>
+
+					<h3 styleName="navLink">
+						<ActiveLink href="/about">
+							Who Are We
+						</ActiveLink>
+					</h3>
+
+					<h3 styleName="navLink">
+						<ActiveLink href="/contact">
+							Join Us / Enquiries
+						</ActiveLink>
+					</h3>
 				</nav>
 			</div>
 		);

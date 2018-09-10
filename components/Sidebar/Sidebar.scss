@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+
+// ====================================================================
+// Sidebar Styling
+// ====================================================================
+
+.sidebarContainer {
+	display: flex;
+	padding: $padding-half $padding-general;
+
+	height: 96px;
+}
+
+.sidebar {
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+
+	img {
+		height: 64px;
+		width: auto;
+	}
+}
+
+.navLink {
+	display: flex;
+	a {
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		text-decoration: none;
+
+		padding: $padding-half;
+		margin: 0 $padding-half;
+
+		&:after {
+			position: absolute;
+			content: '';
+
+			bottom: -$padding-small;
+
+			height: 1px;
+			width: 100%;
+			background: transparent;
+
+			transition: all 0.17s ease-in-out;
+		}
+
+		&:hover {
+			&:after {
+				width: 40%;
+
+				background: $color-gold;
+			}
+		}
+	}
+
+	:global {
+		a.active  {
+			&:after {
+				background: $color-gold;
+			}
+
+			&:hover {
+				&:after {
+					color: darken($color-gold, 20%);
+				}
+			}
+		}
+	}
+}
