@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 class Sidebar extends React.Component {
 	constructor (props) {
 		super(props);
@@ -11,9 +13,19 @@ class Sidebar extends React.Component {
 	render () {
 		return (
       <div>
-        <h1>
-          GLboal HeaDer
-         </h1>
+        <nav>
+					<p>
+						<Link href="/about">
+							<a>Who We Are</a>
+						</Link>
+					</p>
+
+					<p>
+						<Link href="/contact">
+							<a>Join Us / Enquiries</a>
+						</Link>
+					</p>
+				</nav>
 			</div>
 		);
 	}

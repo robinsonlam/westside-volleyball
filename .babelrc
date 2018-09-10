@@ -1,7 +1,16 @@
 {
 	"plugins": [
 		"@babel/plugin-proposal-export-default-from",
-		"@babel/plugin-proposal-function-bind"
+		"@babel/plugin-proposal-function-bind",
+		["react-css-modules", {
+      "filetypes": {
+        ".scss": {
+          "syntax": "postcss-scss"
+        },
+      },
+			"generateScopedName": "[local]___[hash:base64:5]",
+      "exclude": "node_modules"
+    }]
 	],
   "presets": [
 		"@babel/preset-env",
