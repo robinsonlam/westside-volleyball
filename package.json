@@ -1,20 +1,32 @@
 {
-  "name": "westside-volleyball",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "westside-volleyball-club",
+  "version": "0.0.0",
+  "private": true,
   "dependencies": {
+    "async": "2.1.4",
+    "axios": "^0.18.0",
+    "dotenv": "4.0.0",
+    "keystone": "4.0.0-beta.5",
+    "keystone-email": "1.0.5",
+    "lodash": "^4.13.1",
     "next": "^6.1.2",
+    "node-sass": "^4.9.3",
+    "pug": "2.0.0-beta11",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "eslint": "3.15.0",
+    "eslint-config-keystone": "3.0.0",
+    "eslint-plugin-react": "^5.1.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node keystone.js"
   }
 }
