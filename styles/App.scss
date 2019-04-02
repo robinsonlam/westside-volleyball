@@ -1,6 +1,9 @@
 @import 'normalize';
 @import 'typography';
 
+@import './components/header';
+@import './pages/landing';
+
 html {
 	background: $color-black;
 }
