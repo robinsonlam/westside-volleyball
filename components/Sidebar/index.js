@@ -16,30 +16,27 @@ class Sidebar extends React.Component {
 		return (
       <div styleName="sidebarContainer">
 				<div styleName="logo">
-					<img
-						src="/static/images/transparent-logo.png"
-						alt="Westside Logo"
-					/>
+					<h1>Westside Volleyball Club</h1>
 				</div>
 
         <nav styleName="sidebar">
-					<h3 styleName="navLink">
+					<p styleName="navLink">
 						<ActiveLink href="/">
 							Home
 						</ActiveLink>
-					</h3>
+					</p>
 
-					<h3 styleName="navLink">
+					<p styleName="navLink">
 						<ActiveLink href="/about">
-							Who Are We
+							Who We Are
 						</ActiveLink>
-					</h3>
+					</p>
 
-					<h3 styleName="navLink">
+					<p styleName="navLink">
 						<ActiveLink href="/contact">
-							Join Us / Enquiries
+							Join Us
 						</ActiveLink>
-					</h3>
+					</p>
 				</nav>
 			</div>
 		);
