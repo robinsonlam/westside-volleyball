@@ -32,3 +32,7 @@ node_modules
 
 # Editor
 .idea
+
+# Designs
+
+design/
