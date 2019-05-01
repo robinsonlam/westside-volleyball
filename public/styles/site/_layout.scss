@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	background: #fefefe;
+}
+
 #header {
 	margin-top: 30px;
 }
@@ -17,8 +29,16 @@
 
 .gridContainer {
 	width: 960px;
-	padding: 0px $half-padding;
+	padding: 0px $padding-half;
 	margin: 0 auto;
+	
+	display: flex;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 /* Extra small devices (phones, up to 480px) */

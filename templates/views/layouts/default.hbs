@@ -22,8 +22,9 @@
 	</head>
 	<body>
 		<header id="globalHeader">
-			<div class="gridContainer">
+			<div class="gridContainer globalHeaderContainer">
 				<div class="logoContainer">
+					<img src="/images/westside-profile.jpg" alt="Westside Volleyball Club Logo" />
 				</div>
 				
 				<nav class="navigationMenu">
@@ -32,6 +33,10 @@
 							<a href="{{ href }}">{{ label }}</a>
 						</div>
 					{{/each}}
+
+						<div class="navLink">
+							<a href="#join-us">Join Us</a>
+						</div>
 				</nav>
 			</div>
 		</header>
@@ -74,11 +79,19 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div class="container">
-			<div id="footer">
+		
+		<footer id="globalFooter">
+			<div class="gridContainer globalFooterContainer">
+				<h2>Join Us!</h2>
+				<p>Westside Volleyball Club was established in January 2006 but before that it went under other names, we originally began as a social family team.
+
+					It is a non profit organisation based in Sydney South West.
+
+					Feel free to contact and connect with us!</p>
 				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
 			</div>
-		</div>
+		</footer>
+	
 		{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,

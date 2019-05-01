@@ -1,11 +1,20 @@
 #globalHeader {
 	width: 100%;
 	background: #fff;
+	
+	padding-top: $padding-half;
+}
+
+.globalHeaderContainer {
+	flex-direction: column;
 }
 
 .navigationMenu {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
+	
+	margin-top: $padding-half;
 }
 
 .navLink {
@@ -28,6 +37,27 @@
 	padding: 8px 5px;
 
 	text-transform: uppercase;
+}
+
+.logoContainer {
+	display: flex;
+	align-items: center;
+	
+	margin: $padding-half auto;
+	
+	width: 48px;
+	height: 48px;
+	
+	border-radius: 100%;
+	overflow: hidden;
+	
+	border: 2px solid $color-blue;
+
+	position: relative;
+	
+	img {
+		width: 100%;
+	}
 }
 
 
