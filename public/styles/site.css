@@ -5828,10 +5828,20 @@ button.close {
   text-rendering: optimizeLegibility; }
 
 body {
-  background: #fefefe; }
+  font-size: 16px;
+  background: #fefefe;
+  min-height: 100vh; }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
 #header {
   margin-top: 30px; }
+
+#body {
+  flex: 1; }
 
 #footer {
   margin-top: 30px;
@@ -5858,12 +5868,12 @@ h2 {
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 479px) {
   .gridContainer {
-    width: 320px; } }
+    width: 296px; } }
 
 /* Extra small devices (phones, up to 480px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .gridContainer {
-    width: 600px; } }
+    width: 432px; } }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -5905,7 +5915,7 @@ h2 {
   height: 48px;
   border-radius: 100%;
   overflow: hidden;
-  border: 2px solid #286090;
+  border: 2px solid #1472B7;
   position: relative; }
   .logoContainer img {
     width: 100%; }
@@ -5915,23 +5925,38 @@ h2 {
 /* Small devices (tablets, 768px and up) */
 #globalFooter {
   width: 100%;
-  border-bottom: 30px solid #286090; }
+  border-bottom: 30px solid #1472B7; }
 
 .globalFooterContainer {
   flex-direction: column;
   align-items: center;
   padding: 10px 0; }
   .globalFooterContainer h2 {
-    padding: 20px 40px;
+    width: 60%;
+    text-align: center;
+    padding: 40px;
     padding-bottom: 20px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #286090; }
+    margin-bottom: 30px;
+    border-bottom: 3px solid #1472B7; }
   .globalFooterContainer p {
+    max-width: 50%;
     text-align: center;
     margin: 10px; }
 
 /* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 479px) {
+  .globalFooterContainer h2 {
+    width: 100%; }
+  .globalFooterContainer p {
+    max-width: 100%; } }
+
 /* Extra small devices (phones, up to 480px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .globalFooterContainer h2 {
+    width: 80%; }
+  .globalFooterContainer p {
+    max-width: 70%; } }
+
 /* Small devices (tablets, 768px and up) */
 .sliderContainer {
   position: relative;

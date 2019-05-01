@@ -21,76 +21,80 @@
 
 	</head>
 	<body>
-		<header id="globalHeader">
-			<div class="gridContainer globalHeaderContainer">
-				<div class="logoContainer">
-					<img src="/images/westside-profile.jpg" alt="Westside Volleyball Club Logo" />
-				</div>
-				
-				<nav class="navigationMenu">
-					{{# each navLinks}}
-						<div {{#ifeq ../section key}}class="active navLink"{{else}}class="navLink"{{/ifeq}}>
-							<a href="{{ href }}">{{ label }}</a>
-						</div>
-					{{/each}}
+		<div id="app">
+			<header id="globalHeader">
+				<div class="gridContainer globalHeaderContainer">
+					<div class="logoContainer">
+						<img src="/images/westside-profile.jpg" alt="Westside Volleyball Club Logo" />
+					</div>
+					
+					<nav class="navigationMenu">
+						{{# each navLinks}}
+							<div {{#ifeq ../section key}}class="active navLink"{{else}}class="navLink"{{/ifeq}}>
+								<a href="{{ href }}">{{ label }}</a>
+							</div>
+						{{/each}}
 
-						<div class="navLink">
-							<a href="#join-us">Join Us</a>
-						</div>
-				</nav>
+							<div class="navLink">
+								<a href="#join-us">Join Us</a>
+							</div>
+					</nav>
+				</div>
+			</header>
+	<!--							<ul class="nav navbar-nav navbar-right">-->
+	<!--								{{#if user}}-->
+	<!--								<li><a href="/keystone/signout">Sign Out</a></li>-->
+	<!--								{{else}}-->
+	<!--								<li><a href="/keystone/signin">Sign In</a></li>-->
+	<!--								{{/if}}-->
+	<!--							</ul>-->
+			<div id="body">
+				<!--
+					Flash messages allow you to display once-off status messages to users, e.g. form
+					validation errors, success messages, etc
+				-->
+				{{#if messages}}
+				<div id="flash-messages" class="container">
+					{{#if messages.info}}
+					<div class="alert alert-info">
+							{{{flashMessages messages.info}}}
+					</div>
+					{{/if}}
+					{{#if messages.success}}
+					<div class="alert alert-success">
+							{{{flashMessages messages.success}}}
+					</div>
+					{{/if}}
+					{{#if messages.warning}}
+					<div class="alert alert-warning">
+							{{{flashMessages messages.warning}}}
+					</div>
+					{{/if}}
+					{{#if messages.error}}
+					<div class="alert alert-danger">
+							{{{flashMessages messages.error}}}
+					</div>
+					{{/if}}
+				</div>
+				{{/if}}
+				<!-- The content block should contain the body of your template's content-->
+				{{{body}}}
 			</div>
-		</header>
-<!--							<ul class="nav navbar-nav navbar-right">-->
-<!--								{{#if user}}-->
-<!--								<li><a href="/keystone/signout">Sign Out</a></li>-->
-<!--								{{else}}-->
-<!--								<li><a href="/keystone/signin">Sign In</a></li>-->
-<!--								{{/if}}-->
-<!--							</ul>-->
-		<div id="body">
-			<!--
-				Flash messages allow you to display once-off status messages to users, e.g. form
-				validation errors, success messages, etc
-			-->
-			{{#if messages}}
-			<div id="flash-messages" class="container">
-				{{#if messages.info}}
-				<div class="alert alert-info">
-						{{{flashMessages messages.info}}}
+			
+			<footer id="globalFooter">
+				<div class="gridContainer globalFooterContainer">
+					<h2>Join Us!</h2>
+					<p>Westside Volleyball Club was established in January 2006 but before that it went under other names, we originally began as a social family team.
+						<br />
+						<br />
+						It is a non profit organisation based in Sydney South West.
+						<br />
+						<br />
+						Feel free to contact and connect with us!</p>
+					<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
 				</div>
-				{{/if}}
-				{{#if messages.success}}
-				<div class="alert alert-success">
-						{{{flashMessages messages.success}}}
-				</div>
-				{{/if}}
-				{{#if messages.warning}}
-				<div class="alert alert-warning">
-						{{{flashMessages messages.warning}}}
-				</div>
-				{{/if}}
-				{{#if messages.error}}
-				<div class="alert alert-danger">
-						{{{flashMessages messages.error}}}
-				</div>
-				{{/if}}
-			</div>
-			{{/if}}
-			<!-- The content block should contain the body of your template's content-->
-			{{{body}}}
+			</footer>
 		</div>
-		
-		<footer id="globalFooter">
-			<div class="gridContainer globalFooterContainer">
-				<h2>Join Us!</h2>
-				<p>Westside Volleyball Club was established in January 2006 but before that it went under other names, we originally began as a social family team.
-
-					It is a non profit organisation based in Sydney South West.
-
-					Feel free to contact and connect with us!</p>
-				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
-			</div>
-		</footer>
 	
 		{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
